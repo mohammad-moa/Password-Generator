@@ -1,0 +1,20 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "This is a Password Generator App",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mohammad-moa/Password-Generator.git"
+  },
+  "keywords": [],
+  "author": "Mohammad ahrari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mohammad-moa/Password-Generator/issues"
+  },
+  "homepage": "https://github.com/mohammad-moa/Password-Generator#readme"
+}

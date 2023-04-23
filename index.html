@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Password Generator</title>
+</head>
+
+<body>
+
+    <h1>
+        My Password: <span class="my-pass">00000000</span>
+    </h1>
+
+
+    <div id="total-pass">
+        <div class="num-pass">
+            <input type="checkbox" name="numbers" id="numbers">
+            <label for="numbers"> numbers (1,2,3,4,...) </label>
+        </div>
+        <div class="letter-pass">
+            <input type="checkbox" name="letters" id="letters">
+            <label for="letters"> letters (a,b,c,d,...) </label>
+        </div>
+        <div class="character-pass">
+            <input type="checkbox" name="characters" id="characters">
+            <label for="characters"> characters (@,#,&,...) </label>
+        </div>
+    </div>
+
+    <button id="generate-pass">Generate Password</button>
+
+
+    <!-- script -->
+    <script src="lib/script.js"></script>
+</body>
+
+</html>
