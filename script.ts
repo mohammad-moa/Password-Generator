@@ -40,6 +40,27 @@ const GetConstantPass: Function = () => {
         }
       }
     });
+    GeneratePasswordHTML(8, getTypePass.length);
   });
 };
 GetConstantPass();
+
+/*
+    CREATE RANDOM INDEX BETWEEN CHECKED INPUTS TO SPECIFIC LENGTH
+    -- AND --
+    GENERATE PASSWORD AFTER CLICK ON BUTTON GENERATE
+*/
+const GeneratePasswordHTML: Function = (
+  sizePass: number = 8,
+  randomLength: number
+) => {
+  let randomIndex: number[] = [];
+  for (let i = 0; i < sizePass; i++) {
+    randomIndex.push(Math.floor(Math.random() * randomLength));
+  }
+  randomIndex.forEach((v) => {
+    generatePass.push(getTypePass[v]);
+  });
+
+  getMyPassHTML.innerHTML = generatePass.join("") || "00000000";
+};
