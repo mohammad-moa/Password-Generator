@@ -30,7 +30,9 @@ const GetConstantPass: Function = () => {
             getTypePass.push(...NUMBERS.split(""));
             break;
           case "letters":
-            getTypePass.push(...LETTERS.split(""));
+            let TOTAL_LETTERS: string = LETTERS;
+            TOTAL_LETTERS = TOTAL_LETTERS.concat(TOTAL_LETTERS.toUpperCase());
+            getTypePass.push(...TOTAL_LETTERS.split(""));
             break;
           case "characters":
             getTypePass.push(...CHARACTERS.split(""));
