@@ -8,6 +8,9 @@ const getMyPassHTML = document.querySelector(".my-pass") as HTMLSpanElement;
 const totalCheckTypePass: NodeListOf<HTMLInputElement> =
   document.querySelectorAll("#total-pass input");
 
+const BTNCopyPass = document.querySelector(".copy-icon") as HTMLImageElement;
+const BTNDoneCopy = document.querySelector(".done-icon") as HTMLImageElement;
+
 let getTypePass: string[] = [];
 
 let generatePass: (string | undefined)[] = [];
@@ -66,3 +69,20 @@ const GeneratePasswordHTML: Function = (
 
   getMyPassHTML.innerHTML = generatePass.join("") || "00000000";
 };
+
+// COPY AND DONE PASSWORD AFTER CLICK BUTTON COPY
+const CopyPassword: Function = (): void => {
+  BTNCopyPass.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(getMyPassHTML.innerHTML);
+      BTNDoneCopy.style.display = "block";
+      setTimeout(() => {
+        BTNDoneCopy.style.display = "none";
+      }, 1000);
+      console.log("Password Copied!");
+    } catch (err) {
+      console.log("Failed");
+    }
+  });
+};
+CopyPassword();
