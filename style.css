@@ -42,9 +42,31 @@ body {
   overflow: hidden;
 }
 
+#total-section-my-password {
+  position: relative;
+}
+
+.copy-icon,
+.done-icon {
+  position: absolute;
+  top: 0px;
+  right: -20px;
+  width: 23px;
+  height: 23px;
+  background: #202020;
+  border-radius: 6px;
+  padding: 5px;
+  box-shadow: -1px 1px 0 2px #fff;
+  cursor: pointer;
+}
+
+.done-icon {
+  display: none;
+}
+
 .my-pass {
   color: #ffffff;
-  padding: 0 15px;
+  padding: 0 20px;
   background-color: #4528e8;
   border-radius: 9px;
 }
